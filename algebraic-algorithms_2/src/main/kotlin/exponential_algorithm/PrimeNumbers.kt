@@ -121,3 +121,5 @@ fun countPrimeNumbersN(n: Int): Int {
     }
     return countPrime
 }
+
+
