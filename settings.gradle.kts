@@ -13,4 +13,5 @@ include("lucky-tickets_1")
 include("algebraic-algorithms_2")
 include("data-structures_3")
 include("simple-sorts-6")
+include("heap-sort-7")
 
