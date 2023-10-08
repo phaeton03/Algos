@@ -16,4 +16,5 @@ include("simple-sorts-6")
 include("heap-sort-7")
 include("quick-sort_8")
 include("linear-sort-9")
+include("binary-tree-10")
 
