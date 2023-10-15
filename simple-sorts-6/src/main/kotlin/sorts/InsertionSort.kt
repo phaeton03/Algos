@@ -38,7 +38,7 @@ fun insertSortShift(array: LongArray) {
 fun insertSortBinary(array: LongArray) {
     for (i in 1 until array.size) {
         var j = i - 1
-        var k = array[i]
+        val k = array[i]
         val p = binarySearch(array, k, 0, i - 1)
         while (j >= p) {
             array[j + 1] = array[j]
@@ -48,6 +48,9 @@ fun insertSortBinary(array: LongArray) {
     }
 }
 
+/**
+ * Ищет не элемент а место вставки
+ */
 fun binarySearch(sortArray: LongArray, key: Long, low: Int, high: Int): Int {
     if (high <= low) {
         return if (key >= sortArray[low]) low + 1
