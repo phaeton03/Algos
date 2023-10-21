@@ -12,3 +12,5 @@
 7. [Homework №9. Linear sort](./linear-sort-9/README.MD)
 8. [Homework №10. Binary tree](./binary-tree-10/README.MD)
 9. [Homework №12. Treap](./cartesian-tree-and-others_12/README.MD)
+10. [Homework №13. Hash_function](./hash-function-13/README.MD)
+11. [Homework №14. Hash_function-part2](./hash-function-part2-14/README.MD)

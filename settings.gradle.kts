@@ -19,4 +19,5 @@ include("linear-sort-9")
 include("binary-tree-10")
 include("cartesian-tree-and-others_12")
 include("hash-function-13")
+include("hash-function-part2-14")
 
