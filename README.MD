@@ -14,4 +14,5 @@
 9. [Homework №12. Treap](./cartesian-tree-and-others_12/README.MD)
 10. [Homework №13. Hash_function](./hash-function-13/README.MD)
 11. [Homework №14. Hash_function-part2](./hash-function-part2-14/README.MD)
-12. [Homework №15. Trie](./trie_15/README.MD)
+12. [Homework №16. Trie](./trie_16/README.MD)
+13. [Homework №18. Kosaraju](./kosaraju_18/README.MD)

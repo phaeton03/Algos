@@ -28,4 +28,25 @@ class PriorityQueue<T>: Queue<T> {
             null
         }
     }
+
+    override fun enqueue(item: T) {
+        TODO("Not yet implemented")
+    }
+
+    override fun isEmpty(): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun enqueue(items: List<T>) {
+        TODO("Not yet implemented")
+    }
+
+    override fun last(): T {
+        TODO("Not yet implemented")
+    }
+
+    override fun clear() {
+        TODO("Not yet implemented")
+    }
+
 }

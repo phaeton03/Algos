@@ -20,5 +20,6 @@ include("binary-tree-10")
 include("cartesian-tree-and-others_12")
 include("hash-function-13")
 include("hash-function-part2-14")
-include("trie_15")
+include("trie_16")
+include("kosaraju_18")
 

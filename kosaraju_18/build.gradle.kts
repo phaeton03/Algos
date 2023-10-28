@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":common"))
+    implementation(project(":data-structures_3"))
     testImplementation(kotlin("test"))
 }
 
