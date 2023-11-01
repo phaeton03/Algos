@@ -31,4 +31,7 @@ class IQueue<T> : Queue<T> {
         list.clear()
     }
 
+    override fun contains(el: T): Boolean {
+        return list.contains(el)
+    }
 }

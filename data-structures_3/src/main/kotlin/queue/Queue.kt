@@ -15,4 +15,5 @@ interface Queue<T> {
 
     fun clear()
 
+    fun contains(el: T): Boolean
 }

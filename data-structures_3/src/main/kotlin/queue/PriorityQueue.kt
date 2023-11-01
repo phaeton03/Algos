@@ -49,4 +49,7 @@ class PriorityQueue<T>: Queue<T> {
         TODO("Not yet implemented")
     }
 
+    override fun contains(el: T): Boolean {
+        TODO("Not yet implemented")
+    }
 }
