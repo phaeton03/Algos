@@ -19,3 +19,4 @@
 14. [Homework №19. Demukron](./demukron_19/README.MD)
 15. [Homework №20. Minimal Skeleton](./minimal_skeleton_20/README.MD)
 16. [Homework №21. Shortest Path](./shortest_path_21/README.MD)
+17. [Homework №24. Boyer-Moore](./boyer–moore_24/README.MD)
