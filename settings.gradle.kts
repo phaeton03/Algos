@@ -25,4 +25,5 @@ include("kosaraju_18")
 include("demukron_19")
 include("minimal_skeleton_20")
 include("shortest_path_21")
+include("boyer–moore_24")
 
