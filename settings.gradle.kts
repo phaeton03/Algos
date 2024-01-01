@@ -27,4 +27,5 @@ include("minimal_skeleton_20")
 include("shortest_path_21")
 include("boyer–moore_24")
 include("aho-corasick_25")
+include("knuth-morris-pratt_26")
 
