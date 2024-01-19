@@ -1,5 +1,6 @@
 import demukron.demukron
 import demukron.sumTotalInputEdges
+import tariana.tariana
 
 fun main() {
     val graph = arrayOf(
@@ -21,9 +22,9 @@ fun main() {
         listOf(4)
     )
 
-   // println(tariana(graph).toString())
+    println(tariana(graph).toString())
 
     //println(sumTotalInputEdges(graph).contentDeepToString())
 
-    println(demukron(graph2).toString())
+   // println(demukron(graph2).toString())
 }

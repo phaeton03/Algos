@@ -28,4 +28,5 @@ include("shortest_path_21")
 include("boyer–moore_24")
 include("aho-corasick_25")
 include("knuth-morris-pratt_26")
+include("compression-algos_27")
 

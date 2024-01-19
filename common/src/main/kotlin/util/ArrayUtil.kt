@@ -5,3 +5,9 @@ fun swap(array: LongArray, el1: Int, el2: Int) {
     array[el1] = array[el2]
     array[el2] = temp
 }
+
+fun <T> swap(array: MutableList<T>, el1: Int, el2: Int) {
+    val temp = array[el1]
+    array[el1] = array[el2]
+    array[el2] = temp
+}

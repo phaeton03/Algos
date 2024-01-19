@@ -18,7 +18,7 @@ fun heapSort(array: LongArray) {
     }
 }
 
-private fun heapify(array: LongArray, parentIndex: Int, size: Int) {
+fun heapify(array: LongArray, parentIndex: Int, size: Int) {
     val L = 2 * parentIndex + 1
     val R = 2 * parentIndex + 2
 
