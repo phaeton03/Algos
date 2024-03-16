@@ -1,4 +1,5 @@
 import tasks.*
+import java.util.Arrays
 
 
 fun main() {
@@ -11,16 +12,16 @@ fun main() {
 //    )))
 //    (0..7).forEach { println(fiveAndEight(it)) }
     val matrix = arrayOf(
-        intArrayOf(1, 1, 0, 0),
-        intArrayOf(1, 0, 0, 1),
-        intArrayOf(1, 0, 1, 0),
+        intArrayOf(0, 0, 1, 1),
         intArrayOf(0, 1, 1, 0),
+        intArrayOf(0, 1, 0, 1),
+        intArrayOf(1, 0, 0, 1),
     )
 
     val matrix2 = arrayOf(
-        intArrayOf(0, 0, 0, 0),
-        intArrayOf(0, 0, 1, 0),
-        intArrayOf(0, 1, 1, 0),
+        intArrayOf(1, 1, 1, 1),
+        intArrayOf(1, 1, 0, 1),
+        intArrayOf(1, 0, 0, 1),
     )
 
     val matrix3 = arrayOf(
@@ -30,27 +31,23 @@ fun main() {
     )
 
     val matrix4 = arrayOf(
-        intArrayOf(1, 1, 1, 1),
-        intArrayOf(1, 1, 1, 1),
-        intArrayOf(1, 1, 1, 1),
-        intArrayOf(0, 1, 1, 1),
+        intArrayOf(0, 0, 0, 0),
+        intArrayOf(0, 0, 0, 0),
+        intArrayOf(0, 0, 0, 0),
+        intArrayOf(1, 0, 0, 0),
     )
 
    // println("Max Sarai's square ${maxSarajAreaBruteForce(matrix)}")
    // println("Max Sarai's square ${maxSarajAreaBruteForce(matrix2)}")
-    calcMaxLength(matrix)
-    println(matrix4.contentDeepToString())
-    val calcMaxLength1 = calcMaxLength(matrix)
-    val calcMaxLength2 = calcMaxLength(matrix4)
-    val calcMaxLength = calcMaxLength(matrix3)
-    val calcMaxSarajWidthForCertainLength = calcMaxSarajWidthForCertainLength(calcMaxLength)
-    val calcMaxSarajWidthForCertainLength2 = calcMaxSarajWidthForCertainLength(calcMaxLength2)
 
- //   println(calcMaxSarajWidthForCertainLength.contentDeepToString())
-    println(matrix4.contentDeepToString())
-    println(calcMaxLength2.contentDeepToString())
-    println(calcMaxSarajWidthForCertainLength2.contentDeepToString())
-    println(searchMaxArea(calcMaxLength2, calcMaxSarajWidthForCertainLength2))
+//    val matrix4Area = maxSarajAreaByLengthAndWidthOptionThree(matrix4)
+    val matrix3Area = maxSarajAreaByLengthAndWidthOptionThree(matrix3)
+    val matrix2Area = maxSarajAreaByLengthAndWidthOptionThree(matrix2)
+    val matrix1Area = maxSarajAreaByLengthAndWidthOptionThree(matrix)
+//    println("matrix4: $matrix4Area")
+    println("matrix3: $matrix3Area")
+    println("matrix2: $matrix2Area")
+    println("matrix1: $matrix1Area")
 }
 
 

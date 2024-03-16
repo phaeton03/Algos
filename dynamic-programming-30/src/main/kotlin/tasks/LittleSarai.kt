@@ -1,6 +1,6 @@
 package tasks
 
-import kotlin.math.min
+import java.util.Stack
 
 /**
  * Фермер хочет построить на своей земле как можно больший по площади сарай.
@@ -66,6 +66,7 @@ fun calc(matrix: Array<IntArray>, x: Int, y: Int): Int {
 }
 
 /**
+ * ВАРИАНТ №1
  * Длина сарая. Вычисление максимальной длины сарая для каждой клетки, +2 байта
  * https://www.robotsharp.info/index.php?page=TaskInfo&taskId=1739
  * Укажите в отчёте, сколько времени ушло на решение этой задачи.
@@ -86,6 +87,101 @@ fun calcMaxLength(matrix: Array<IntArray>): Array<IntArray> {
     }
 
     return lengthMatrix
+}
+
+/**
+ * ВАРИАНТ №2
+ * Длина сарая. Вычисление максимальной длины сарая для каждой клетки, +2 байта
+ * https://www.robotsharp.info/index.php?page=TaskInfo&taskId=1739
+ * Укажите в отчёте, сколько времени ушло на решение этой задачи.
+ */
+private fun fillLengthForCertainRow(maxLengthRow: Array<Int>, nextRow: IntArray) {
+
+    nextRow.mapIndexed { index, value ->
+        maxLengthRow[index] = if (value == 0) maxLengthRow[index] + 1 else 0
+    }
+}
+
+fun maxSarajAreaOptionTwo(matrix: Array<IntArray>): Int {
+    var maxArea = 0
+    val maxLengthRow = Array(matrix.size) { 0 }
+
+    for (rowIdx in matrix.indices) {
+        fillLengthForCertainRow(maxLengthRow, matrix[rowIdx])
+        for (colIdx in matrix[0].indices) {
+            for (w in 1..matrix.size - colIdx) {
+                val tempArea = w * maxLengthRow[colIdx]
+                if (tempArea > maxArea) {
+                    maxArea = tempArea
+                }
+            }
+        }
+    }
+
+    return maxArea
+}
+
+/**
+ * Ширина сарая. Вычисление максимально доступной ширины для выбранной длины. +2 байта.
+ */
+
+fun fillRightBorder(heights: Array<Int>, row: IntArray): Array<Int> {
+    val rights = Array(row.size) { row.size - 1 }
+    val stack: Stack<Int> = Stack()
+
+    for (colIdx in row.indices) {
+        if (stack.isNotEmpty()) {
+            var stackEl = stack.peek()
+            val height = heights[colIdx]
+
+            while (stack.isNotEmpty() && heights[stackEl] > height) {
+                stackEl = stack.pop()
+                rights[stackEl] = colIdx - 1
+            }
+        }
+        stack.push(colIdx)
+    }
+    return rights
+}
+
+
+fun fillLeftBorder(heights: Array<Int>, row: IntArray): Array<Int> {
+    val lefts = Array(row.size) { 0 }
+    val stack: Stack<Int> = Stack()
+
+    for (colIdx in row.indices.reversed()) {
+        if (stack.isNotEmpty()) {
+            var stackEl = stack.peek()
+            val height = heights[colIdx]
+
+            while (stack.isNotEmpty() && heights[stackEl] > height) {
+                stackEl = stack.pop()
+                lefts[stackEl] = colIdx + 1
+            }
+        }
+        stack.push(colIdx)
+    }
+    return lefts
+}
+
+fun maxSarajAreaByLengthAndWidthOptionThree(matrix: Array<IntArray>): Int {
+    var maxArea = 0
+    val maxLengthRow = Array(matrix[0].size) { 0 }
+
+    for (rowIdx in matrix.indices) {
+        fillLengthForCertainRow(maxLengthRow, matrix[rowIdx])
+        val leftBorder = fillLeftBorder(maxLengthRow, matrix[rowIdx])
+        val rightBorder = fillRightBorder(maxLengthRow, matrix[rowIdx])
+        for (colIdx in matrix[0].indices) {
+            val width =  rightBorder[colIdx] - leftBorder[colIdx] + 1
+            val tempArea = width * maxLengthRow[colIdx]
+            if (tempArea > maxArea) {
+                maxArea = tempArea
+            }
+        }
+    }
+
+    return maxArea
 }
 
 /**
