@@ -22,3 +22,4 @@
 17. [Homework №24. Boyer-Moore](./boyer–moore_24/README.MD)
 18. [Homework №25. Aho-Corasick](./aho-corasick_25/README.MD)
 19. [Homework №26. Knuth-Morris-Pratt](./knuth-morris-pratt_26/README.MD)
+20. [Homework №27. Compression-Algos](./compression-algos_27/README.MD)
